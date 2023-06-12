@@ -20,10 +20,6 @@ public class ToDoInfoController {
     return "new to do list added";
   }
 
-  @PostMapping("/add")
-  public String add(@RequestBody String test) {
-    return test;
-  }
   @PutMapping("/update-todo-status/{id}")
   public ToDoInfo updateTodoStatusById(@PathVariable Long id) {
     ToDoInfo toDoInfo = toDoInfoRepository.findById(id).orElseThrow(() -> new InvalidConfigurationPropertyValueException("UPDATE FAILED", id, "Invalid To-Do Item"));
