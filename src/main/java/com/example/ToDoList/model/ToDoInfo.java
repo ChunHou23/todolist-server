@@ -17,6 +17,7 @@ public class ToDoInfo {
   private Long id;
   private String description;
   private Long reminder;
+  private Boolean status;
 
   public Long getId() {
     return id;
@@ -24,10 +25,10 @@ public class ToDoInfo {
   public String getDescription() {
     return description;
   }
-
   public Long getReminder() {
     return reminder;
   }
+  public Boolean getStatus() { return status; }
 
   public void setDescription(String description) {
     this.description = description;
@@ -36,4 +37,6 @@ public class ToDoInfo {
   public void setReminder(Long reminder) {
     this.reminder = reminder;
   }
+
+  public void setStatus(Boolean status) { this.status = status; }
 }
